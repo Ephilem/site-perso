@@ -1,0 +1,24 @@
+:root {
+    --primary-color: #FF4E08;
+    --primary-content-color: #fff;
+
+    --foreground-color: #fff;
+    --background-color: #000;
+    --foreground-muted-color: #292929;
+
+
+
+    --spacing: 0.25rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--foreground-color);
+
+    font-family: 'IBM Plex Mono', monospace;
+    background: var(--background-color);
+}
+
+
+
