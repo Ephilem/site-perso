@@ -6,8 +6,11 @@
         BigSeparator,
         Navigation,
     } from "$lib/components";
+    import {setContext} from "svelte";
 
     let {data, children} = $props();
+
+    setContext("user", data.user)
 </script>
 
 <div class="base-container">
@@ -20,12 +23,12 @@
         <svg width="10" height="10" viewBox="0 0 5 5" class="corner" style="bottom: -5px;left:-4px"><path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path></svg>
         <svg width="10" height="10" viewBox="0 0 5 5" class="corner" style="bottom: -5px;right:-5px"><path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path></svg>
         <header>
-                <img
-                        src="src/assets/pp.webp"
-                        alt="Profile Picture"
-                        width="128"
-                        height="128"
-                />
+            <img
+                    src="src/assets/pp.webp"
+                    alt="Profile Picture"
+                    width="128"
+                    height="128"
+            />
             <h1>Raphaël AIMÉ</h1>
             <p>
                 Étudiant en 3ème année de BUT Informatique à l'IUT de Vannes
@@ -33,9 +36,7 @@
         </header>
         <BigSeparator />
         <Navigation />
-        <div class="separator">
-
-        </div>
+        <div class="separator"></div>
         <div>
             {@render children()}
         </div>

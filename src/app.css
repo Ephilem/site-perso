@@ -4,9 +4,8 @@
 
     --foreground-color: #fff;
     --background-color: #000;
-    --foreground-muted-color: #292929;
-
-
+    --foreground-muted-color: #393939;
+    --foreground-muted-text-color: #595959;
 
     --spacing: 0.25rem;
 }
