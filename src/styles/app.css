@@ -1,9 +1,11 @@
 :root {
-    --primary-color: #FF4E08;
+    --primary-color: #F08E35;
     --primary-content-color: #fff;
+    --primary-content-text-color: #000;
+    --primary-color-hover: #A8551F;
 
     --foreground-color: #fff;
-    --background-color: #000;
+    --background-color: #171717;
     --foreground-muted-color: #393939;
     --foreground-muted-text-color: #595959;
 

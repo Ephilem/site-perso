@@ -7,13 +7,10 @@
 </script>
 
 <nav>
-    <NavButton text="Moi" selected={page.url.pathname === "/"} onclick={() => goto("/")}/>
-    <NavButton text="Projets" selected={page.url.pathname.startsWith("/projects")} onclick={() => goto("/projects")}/>
-    <NavButton text="Jeux" selected={page.url.pathname.startsWith("/games")} onclick={() => goto("/games")}/>
-
-    <div class="connected-indicator">
-        {connected}
-    </div>
+    <NavButton text="Moi" selected={page.url.pathname === "/"} href="/"/>
+    <!-- <NavButton text="Projets" selected={page.url.pathname.startsWith("/projects")} href="/projects"/>
+    <NavButton text="Posts" selected={page.url.pathname.startsWith("/posts")} href="/posts"/> -->
+    <!-- <NavButton text="Jeux" selected={page.url.pathname.startsWith("/games")} href="/games"/> -->
 </nav>
 
 <style>
@@ -22,15 +19,5 @@
         position: relative;
         justify-content: center;
         column-gap: calc(var(--spacing) * 4);
-    }
-
-    div {
-        position: absolute;
-        right: 0;
-        height: 100%;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 </style>

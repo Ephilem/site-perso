@@ -44,6 +44,60 @@
           "type": "categories"
         }
       ]
+    },
+    {
+      "name": "project",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Last updated",
+          "name": "updated",
+          "type": "datetime"
+        },
+        {
+          "title": "Content preview",
+          "name": "preview",
+          "type": "image"
+        },
+        {
+          "title": "GitHub URL",
+          "name": "github",
+          "type": "string"
+        },
+        {
+          "title": "Website URL",
+          "name": "website",
+          "type": "string"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        }
+      ]
     }
   ],
   "frontMatter.framework.id": "other",
@@ -51,17 +105,20 @@
   "frontMatter.content.pageFolders": [
     {
       "title": "Pages",
-      "path": "[[workspace]]/src/lib/server/contents",
+      "path": "[[workspace]]/src/contents",
       "excludeSubdir": true
     },
     {
       "title": "Posts",
-      "path": "[[workspace]]/src/lib/server/contents/posts"
+      "path": "[[workspace]]/src/contents/posts"
     },
     {
       "title": "Projects",
-      "path": "[[workspace]]/src/lib/server/contents/projects"
+      "path": "[[workspace]]/src/contents/projects"
     }
   ],
+  "frontMatter.taxonomy.tags": [],
+  "frontMatter.taxonomy.categories": [],
+  "frontMatter.taxonomy.technologies": [],
   "frontMatter.git.enabled": false
 }

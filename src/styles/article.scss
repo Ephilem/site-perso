@@ -1,0 +1,21 @@
+.prose {
+    h1 {
+        position: relative;
+        margin: 0;
+    }
+    h1:nth-of-type(n+2) {
+        margin-top: 1.2em;
+    }
+    h1:nth-of-type(n+2)::before {
+        content: "";
+        position: absolute;
+        top: -0.5em;
+        width: 100%;
+        height: 2px;
+        border-top: 1px dashed var(--foreground-muted-color);
+    }
+
+    p {
+        text-indent: 2em;
+    }
+}

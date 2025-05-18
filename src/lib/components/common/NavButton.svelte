@@ -4,13 +4,13 @@
         class: className = "",
         selected = false,
         textSize = 18,
-        onclick = () => {},
+        href = "#"
     } = $props();
 
     let characters = $derived(text.split(""));
 </script>
 
-<button class="text-button {selected ? 'selected' : ''}" onclick={onclick}>
+<a class="text-button {selected ? 'selected' : ''}" href={href}>
     <div class="button-content {className}">
         <div class="text-container" style="font-size: {textSize}px; line-height: {textSize}px">
             <span class="transparent-text" style="font-size: {textSize}px">{text}</span>
@@ -37,7 +37,7 @@
         <div class="circle left"></div>
         <div class="circle right"></div>
     </div>
-</button>
+</a>
 
 <style>
     .text-button {
@@ -88,7 +88,7 @@
     }
 
     .selected .default-text {
-        color: var(--primary-content-color);
+        color: var(--primary-content-text-color);
     }
 
     .hover-text {

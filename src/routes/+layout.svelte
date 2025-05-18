@@ -1,12 +1,14 @@
 <script lang="ts">
-    import "../fonts.css";
-    import "../app.css";
+    import "../styles/fonts.css";
+    import "../styles/app.css";
 
     import {
         BigSeparator,
         Navigation,
     } from "$lib/components";
-    import {setContext} from "svelte";
+        import {setContext} from "svelte";
+    import pp from "$lib/assets/pp.webp";
+    import { fade, fly } from 'svelte/transition';
 
     let {data, children} = $props();
 
@@ -24,7 +26,7 @@
         <svg width="10" height="10" viewBox="0 0 5 5" class="corner" style="bottom: -5px;right:-5px"><path d="M2 0h1v2h2v1h-2v2h-1v-2h-2v-1h2z"></path></svg>
         <header>
             <img
-                    src="src/assets/pp.webp"
+                    src={pp}
                     alt="Profile Picture"
                     width="128"
                     height="128"
@@ -37,9 +39,13 @@
         <BigSeparator />
         <Navigation />
         <div class="separator"></div>
-        <div>
-            {@render children()}
-        </div>
+        {#key data.url}
+            <div class="page-content" 
+                 in:fly={{ x: 20, y: 0, duration: 300, delay: 300, opacity: 0 }} 
+                 out:fly={{ x: -20, y: 0, duration: 300, opacity: 0 }}>
+                {@render children()}
+            </div>
+        {/key}
     </div>
     <div></div>
     <div></div>
@@ -67,6 +73,7 @@
         grid-column: 2;
         grid-row: 2;
         position: relative;
+        transition: transform 0.3s ease-in-out;
     }
     .corner {
         position: absolute;
