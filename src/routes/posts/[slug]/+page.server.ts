@@ -9,11 +9,13 @@ export const prerender = true;
  * @returns 
  */
 export const entries: EntryGenerator = () => {
-    const posts = getPosts({ draft: false });
+    const posts = getPosts();
 
-    return posts.map((post) => {
+    const paths = posts.map((post) => {
         return {
             slug: post.slug,
         };
     });
+
+    return paths;
 }

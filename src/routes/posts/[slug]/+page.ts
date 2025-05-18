@@ -7,9 +7,9 @@ export const load: PageLoad = async (event) => {
     console.log("Getting post ", slug);
     const post: { default: any; metadata: Post } = await import(`$contents/posts/${slug}.md`);
     
-    if (!post || post.metadata.draft) {
-        throw error(404, 'Post not found');
-    }
+    // if (!post || post.metadata.draft) {
+    //     throw error(404, 'Post not found');
+    // }
 
     return {
         post: post.metadata,

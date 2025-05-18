@@ -3,7 +3,6 @@ title: Cluedo
 type: project
 description: Reproduction du jeu de société Cluedo en ligne pour apprendre les bases de données en graphes
 date: 2024-10-07T21:26:33.000Z
-preview: /src/lib/assets/projects/cluedo_game.png
 draft: true
 tags:
     - Web
