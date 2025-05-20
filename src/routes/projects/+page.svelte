@@ -1,8 +1,8 @@
 <script lang="ts">
     import ProjectElement from '$components/projects/ProjectElement.svelte';
-  import type { PageData } from './$types';
+    import type { PageData } from './$types';
 
-  const { data }: { data: PageData } = $props()
+    const { data }: { data: PageData } = $props()
 </script>
 
 <main>

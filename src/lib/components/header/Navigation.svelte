@@ -8,8 +8,8 @@
 
 <nav>
     <NavButton text="Moi" selected={page.url.pathname === "/"} href="/"/>
-    <!-- <NavButton text="Projets" selected={page.url.pathname.startsWith("/projects")} href="/projects"/>
-    <NavButton text="Posts" selected={page.url.pathname.startsWith("/posts")} href="/posts"/> -->
+    <NavButton text="Projets" selected={page.url.pathname.startsWith("/projects")} href="/projects"/>
+    <NavButton text="Posts" selected={page.url.pathname.startsWith("/posts")} href="/posts"/>
     <!-- <NavButton text="Jeux" selected={page.url.pathname.startsWith("/games")} href="/games"/> -->
 </nav>
 
